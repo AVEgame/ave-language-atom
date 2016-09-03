@@ -1,0 +1,66 @@
+'scopeName': 'source.ave'
+'name': 'AVE'
+'fileTypes': ['ave', 'items']
+
+'patterns': [
+  {
+    'match': '(.*)\\s(\=\>)\\s(?!_)([a-z_A-Z1-9]*)\\b',
+    'captures':
+      '1':
+        'name': 'string.quoted.single.ave'
+      '2':
+        'name': 'keyword.operator.ave'
+      '3':
+        'name': 'variable.parameter.ave'
+  },
+  {
+    'match': '(.*)\\s(\=\>)\\s',
+    'captures':
+      '1':
+        'name': 'string.quoted.single.ave'
+      '2':
+        'name': 'keyword.operator.ave'
+  },
+  {
+    'match': '__GAMEOVER__',
+    'name': 'constant.language.ave'
+  },
+  {
+    'match': '__WINNER__',
+    'name': 'constant.language.ave'
+  },
+  {
+    'match': '(#)\\s(.*)',
+    'captures':
+      '1':
+        'name': 'keyword.operator.ave'
+      '2':
+        'name': 'variable.parameter.ave'
+  },
+  {
+    'match': '\\s(\\?|\\?\!|\\+|\\~)\\s(\\S*)\\b',
+    'captures':
+      '1':
+        'name': 'keyword.operator.ave'
+      '2':
+        'name': 'entity.name.function.ave'
+  },
+  {
+    'match': '(%)\\s(.*)',
+    'captures':
+      '1':
+        'name': 'keyword.operator.ave'
+      '2':
+        'name': 'entity.name.function.ave'
+  },
+  {
+    'match': '(==|--|\\*\\*)\\s(.*)\\s(==|--|\\*\\*)',
+    'captures':
+      '1':
+        'name': 'keyword.operator.ave'
+      '2':
+        'name': 'support.function.ave'
+      '3':
+        'name': 'keyword.operator.ave'
+  },
+]
